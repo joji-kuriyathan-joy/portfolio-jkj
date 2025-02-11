@@ -257,6 +257,26 @@
   padding: 10px;
 }
 
+.projects-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects-nav button {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.project-nav button:hover {
+  border: 1px solid #28666e;
+  background-color: none;
+}
+
 /* ++++++ ProjectCard css ++++*/
 .project-card {
   border: 1px solid #d3d3d3;

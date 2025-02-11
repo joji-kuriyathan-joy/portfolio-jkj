@@ -9,8 +9,8 @@ import AllProjects from "./AllProjects.jsx";
 
 const Portfolio = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
-  const toggleProjects = (value) => {
-    setShowAllProjects(value);
+  const toggleProjects = () => {
+    setShowAllProjects(!showAllProjects);
   };
 
   return (
@@ -18,7 +18,7 @@ const Portfolio = () => {
       {showAllProjects ? (
         <div className="wrapper wrapper-allproj ">
           <ProjectDataContext.Provider value={{ projectsData }}>
-            <AllProjects />
+            <AllProjects sendData={toggleProjects} />
           </ProjectDataContext.Provider>
         </div>
       ) : (

@@ -18,7 +18,7 @@ const Projects = ({ sendData }) => {
             <div className='project-head'>
                 <h1 className='ubuntu-medium'>Projects</h1>
                 {projectList.length > 2 && (
-                    <button className='btn-custom' type="button" onClick={() => sendData(true)}>
+                    <button className='btn-custom' type="button" onClick={() => sendData()}>
                         See all
                     </button>
                 )}
