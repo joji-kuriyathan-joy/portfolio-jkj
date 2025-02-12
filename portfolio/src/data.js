@@ -357,5 +357,61 @@ export const projectsData = [
             "This project bridges the gap between **caregivers and healthcare professionals** by transforming paper-based diaries into **a digital, AI-powered health tracking solution**. By providing **real-time insights and secure data storage**, it improves patient care and simplifies the tracking process for caregivers.",
         reference: "https://github.com/joji-kuriyathan-joy/Nhs-Family-Invoice",
         image: "/nhsApp.png",
-    },
+    }, {
+        id: "crypto.randomUUID()",
+        title: "Multi-Class Body Performance Classification Using Machine Learning",
+        description: "A machine learning project aimed at classifying body performance into four grades (A: best, B: good, etc.) for individuals aged 20 to 60. The project utilizes various machine learning techniques to analyze and predict body performance based on features like age, gender, weight, heart rate, and more.",
+        subheading: "Enhancing Health Awareness Through Machine Learning",
+        technologies: [
+            "Python",
+            "Scikit-learn",
+            "Pandas",
+            "NumPy",
+            "Matplotlib",
+            "Seaborn",
+            "TensorFlow",
+            "Keras",
+            "Jupyter Notebook"
+        ],
+        projectStructure: {
+            "frontend": "Jupyter Notebook for data visualization and analysis",
+            "backend": "Python (Scikit-learn, TensorFlow, Keras)",
+            "database": "Kaggle dataset for body performance data",
+            "dataProcessing": "Exploratory Data Analysis (EDA), Feature Scaling, Hyperparameter Tuning"
+        },
+        projectScope: "This project aims to build a **machine learning model** that can classify body performance into four grades based on various physical attributes. The model is designed to help individuals and healthcare providers understand and improve physical health by providing actionable insights.",
+        keyFeatures: [
+            "📊 **Exploratory Data Analysis (EDA)** - Visualized data distribution, correlation, and outliers using various plots.",
+            "🤖 **Multiple Machine Learning Models** - Utilized Random Forest, Support Vector Machine, Decision Tree, and Artificial Neural Network for classification.",
+            "🔧 **Feature Scaling & Hyperparameter Tuning** - Applied Standard Scaler and hyperparameter tuning to optimize model performance.",
+            "📈 **Performance Metrics** - Evaluated models using accuracy score, precision, recall, and confusion matrix.",
+            "📂 **Balanced Dataset** - Ensured the dataset was balanced with equal representation of each class."
+        ],
+        importantCodeSnippet: "Random Forest Classifier Implementation",
+        codeSnippet: "from sklearn.ensemble import RandomForestClassifier\nmodel = RandomForestClassifier()\nmodel.fit(X_train, y_train)\npredictions = model.predict(X_test)",
+        projectChallenges: [
+            "📉 **Handling Outliers** - Managing outliers in features like height, weight, and body fat.",
+            "🤔 **Model Selection** - Choosing the best-performing model among Random Forest, SVM, Decision Tree, and ANN.",
+            "⚙️ **Hyperparameter Tuning** - Optimizing model parameters to avoid overfitting and underfitting."
+        ],
+        solutionApproach: [
+            "✅ **Applied Feature Scaling** to normalize data and reduce the impact of outliers.",
+            "✅ **Used Hyperparameter Tuning** to find the optimal parameters for each model.",
+            "✅ **Selected Random Forest** as the best-performing model based on accuracy and other metrics."
+        ],
+        userExperience: {
+            "dataInput": "Users can input physical attributes like age, gender, weight, and heart rate.",
+            "modelPrediction": "The model predicts the body performance grade (A, B, C, D) based on the input data.",
+            "resultsVisualization": "Results are visualized using confusion matrices and accuracy scores."
+        },
+        futureEnhancements: [
+            "📍 **Integration with Wearable Devices** - Collect real-time data from fitness trackers and smartwatches.",
+            "🩺 **Advanced Deep Learning Models** - Implement more complex neural networks for better accuracy.",
+            "📲 **Mobile Application** - Develop a mobile app for easy access and real-time predictions.",
+            "📊 **Enhanced Data Analytics** - Provide detailed health insights and recommendations based on body performance."
+        ],
+        impact: "This project provides a **data-driven approach** to understanding and improving body performance. By leveraging machine learning, it offers a **scalable solution** for individuals and healthcare providers to monitor and enhance physical health.",
+        reference: "https://www.kaggle.com/datasets/kukuro03/body-performance-data",
+        image: "/bodyPerf.png"
+    }
 ];
