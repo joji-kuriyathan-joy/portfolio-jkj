@@ -30,9 +30,9 @@ const AllProjects = ({ sendData }) => {
                 ) : (
                     <h2>
                         <button onClick={() => sendData()}>
-                            <h2>Home</h2>
+                            <h2>Home /</h2>
                         </button>
-                        / Projects
+                        Projects
                     </h2>
                 )}
             </div>
