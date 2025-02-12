@@ -32,7 +32,7 @@ const AllProjects = ({ sendData }) => {
                         <button onClick={() => sendData()}>
                             <h2>Home</h2>
                         </button>
-                        / Project
+                        / Projects
                     </h2>
                 )}
             </div>
