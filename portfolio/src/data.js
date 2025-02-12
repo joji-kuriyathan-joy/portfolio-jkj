@@ -411,7 +411,7 @@ export const projectsData = [
             "📊 **Enhanced Data Analytics** - Provide detailed health insights and recommendations based on body performance."
         ],
         impact: "This project provides a **data-driven approach** to understanding and improving body performance. By leveraging machine learning, it offers a **scalable solution** for individuals and healthcare providers to monitor and enhance physical health.",
-        reference: "https://www.kaggle.com/datasets/kukuro03/body-performance-data",
+        reference: "https://github.com/joji-kuriyathan-joy/BODY_PERFORMANCE",
         image: "/bodyPerf.png"
     }
 ];
