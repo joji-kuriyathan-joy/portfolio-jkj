@@ -194,6 +194,7 @@ export const techStackList = [
     },
 ];
 
+// infomation regaring projects in detail
 let dataForteCodeSnip = `
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -358,7 +359,7 @@ export const projectsData = [
         reference: "https://github.com/joji-kuriyathan-joy/Nhs-Family-Invoice",
         image: "/nhsApp.png",
     }, {
-        id: "crypto.randomUUID()",
+        id: crypto.randomUUID(),
         title: "Multi-Class Body Performance Classification Using Machine Learning",
         description: "A machine learning project aimed at classifying body performance into four grades (A: best, B: good, etc.) for individuals aged 20 to 60. The project utilizes various machine learning techniques to analyze and predict body performance based on features like age, gender, weight, heart rate, and more.",
         subheading: "Enhancing Health Awareness Through Machine Learning",
@@ -413,5 +414,191 @@ export const projectsData = [
         impact: "This project provides a **data-driven approach** to understanding and improving body performance. By leveraging machine learning, it offers a **scalable solution** for individuals and healthcare providers to monitor and enhance physical health.",
         reference: "https://github.com/joji-kuriyathan-joy/BODY_PERFORMANCE",
         image: "/bodyPerf.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Workplace Management System",
+        description: "A full-stack workplace management system designed to streamline employee scheduling, timesheet management, and communication between users and admins. The system features user authentication, rota (schedule) management, timesheet tracking, and notifications.",
+        subheading: "Simplifying Workplace Operations with React and Flask",
+        technologies: [
+            "React (Frontend)",
+            "Flask (Backend)",
+            "JavaScript",
+            "Python",
+            "React Router",
+            "React Big Calendar",
+            "Flask-JWT-Extended",
+            "Flask-CORS",
+            "Vite"
+        ],
+        projectStructure: {
+            "frontend": "React (Vite) with components for user and admin interfaces",
+            "backend": "Flask for API endpoints, authentication, and database interactions",
+            "database": "JSON for database",
+            "authentication": "JWT-based authentication for secure user and admin login",
+            "dataProcessing": "Timesheet generation, rota management, and notifications",
+            "agileDevelopment": "Developed using Scrum methodology with iterative development"
+        },
+        projectScope: "This project aims to **simplify workplace operations** by providing a centralized platform for **employee scheduling, timesheet management, and communication**. It includes features for both regular users and admins, ensuring efficient management of rotas, work hours, and notifications.",
+        keyFeatures: [
+            "🔐 **User Authentication** - Secure login and registration for users and admins.",
+            "📅 **Rota Management** - Admins can create and edit weekly/monthly schedules, while users can view their rotas in weekly or monthly views.",
+            "⏱️ **Timesheet Management** - Users can log daily work hours, and the system generates monthly summaries. Admins can approve or edit timesheets.",
+            "📝 **Notes and Notifications** - Users can add notes to specific days, triggering notifications for admins.",
+            "📊 **Dashboard** - Provides an overview of upcoming shifts, total hours worked, and notifications.",
+            "📄 **Export Options** - Timesheets can be exported as PDF or Excel for reporting purposes."
+        ],
+        importantCodeSnippet: "Flask JWT Authentication Setup",
+        codeSnippet: "from flask_jwt_extended import JWTManager, create_access_token\n\napp = Flask(__name__)\napp.config['JWT_SECRET_KEY'] = 'your-secret-key'\njwt = JWTManager(app)\n\n@app.route('/login', methods=['POST'])\ndef login():\n    # Authenticate user and return JWT token\n    access_token = create_access_token(identity=username)\n    return jsonify(access_token=access_token)",
+        projectChallenges: [
+            "🛠️ **Role-Based Access Control** - Implementing different views and functionalities for users and admins.",
+            "📅 **Rota Scheduling** - Managing and displaying weekly/monthly schedules dynamically.",
+            "⏱️ **Timesheet Validation** - Ensuring accurate logging and approval of work hours.",
+            "🔐 **Secure Authentication** - Implementing JWT-based authentication for secure access."
+        ],
+        solutionApproach: [
+            "✅ **Used React Router** for seamless navigation between user and admin views.",
+            "✅ **Implemented React Big Calendar** for dynamic rota scheduling and visualization.",
+            "✅ **Leveraged Flask-JWT-Extended** for secure authentication and role-based access.",
+            "✅ **Developed modular components** for timesheet management and notifications."
+        ],
+        userExperience: {
+            "login": "Users and admins can log in securely using JWT-based authentication.",
+            "registration": "New users can register and gain access to the system.",
+            "dashboard": "Provides an overview of upcoming shifts, total hours worked, and notifications.",
+            "rota": "Users can view their schedules in weekly or monthly views, while admins can create and edit rotas.",
+            "timesheet": "Users can log daily work hours and view monthly summaries. Admins can approve or edit timesheets.",
+            "notifications": "Users can add notes to specific days, triggering notifications for admins.",
+            "profile": "Users can update their profile information and change passwords."
+        },
+        futureEnhancements: [
+            "📍 **Mobile App** - Develop a mobile version for easier access on the go.",
+            "📊 **Advanced Analytics** - Provide insights into employee productivity and scheduling efficiency.",
+            "🤖 **Automated Notifications** - Send reminders for upcoming shifts or pending timesheet approvals.",
+            "🔄 **Integration with HR Systems** - Sync data with existing HR platforms for seamless operations."
+        ],
+        impact: "This project **streamlines workplace operations** by providing a centralized platform for scheduling, timesheet management, and communication. It enhances efficiency for both employees and admins, reducing manual effort and improving transparency.",
+        reference: "https://github.com/joji-kuriyathan-joy/Workplace-Management",
+        image: "/WPM.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "SQL Data Export Tool",
+        description: "A Python-based tool designed to automate the extraction of data from SQL Server databases and export it to Excel or CSV files. The tool supports multiple queries, customizable output formats, and detailed logging for execution tracking.",
+        subheading: "Streamlining Data Export from SQL Server to Excel/CSV",
+        technologies: [
+            "Python",
+            "pyodbc",
+            "Pandas",
+            "OpenPyXL",
+            "JSON",
+            "SQL Server"
+        ],
+        projectStructure: {
+            "frontend": "Command-line tool",
+            "backend": "Python script for SQL query execution and data export",
+            "database": "SQL Server for data storage and retrieval",
+            "authentication": "SQL Server credentials for database access",
+            "dataProcessing": "Data extraction, transformation, and export to Excel/CSV",
+            "Development": "Script-based development"
+        },
+        projectScope: "This project aims to **automate the process of exporting data from SQL Server databases** to Excel or CSV files. It supports multiple SQL queries, customizable output formats (with or without headers), and detailed logging for execution tracking. The tool is designed to handle large datasets and provides flexibility in exporting data for reporting and analysis purposes.",
+        keyFeatures: [
+            "📊 **Multi-Query Support** - Executes multiple SQL queries and exports results to separate sheets (Excel) or files (CSV).",
+            "📂 **Customizable Output** - Supports exporting data with or without column headers and allows customization of delimiters for CSV files.",
+            "📝 **Detailed Logging** - Logs the execution process, including query execution times and errors, for easy debugging and tracking.",
+            "📅 **Dynamic File Naming** - Generates output files with timestamps to ensure uniqueness and avoid overwriting.",
+            "🔧 **Configurable via JSON** - Uses a JSON configuration file to specify SQL connection details, queries, output paths, and export settings.",
+            "📄 **Excel and CSV Export** - Supports exporting data to both Excel (with multiple sheets) and CSV formats."
+        ],
+        importantCodeSnippet: "Exporting Data to Excel",
+        codeSnippet: "def Export_to_Excel(connection, query_list, sheets_list, column_header_flag, output_file_name, output_file_path, log_file):\n    try:\n        workbook = Workbook()\n        for i, query in enumerate(query_list):\n            worksheet = workbook.create_sheet(sheets_list[i])\n            cursor = connection.cursor()\n            cursor.execute(query)\n            records = cursor.fetchall()\n            columns = [desc[0] for desc in cursor.description]\n            if column_header_flag == 'True':\n                for n, column in enumerate(columns, 0):\n                    worksheet.cell(row=1, column=n + 1).value = column\n            for n, row in enumerate(records, 1):\n                for i in range(len(columns)):\n                    worksheet.cell(row=n + 1, column=i + 1).value = row[i]\n        workbook.save(output_file_name)\n    except Exception as e:\n        log_file.write(f'Error in Export_to_Excel: {e}')",
+        projectChallenges: [
+            "🛠️ **Handling Large Datasets** - Ensuring efficient execution and export of large SQL query results.",
+            "📂 **Dynamic File Management** - Generating unique file names and managing multiple output files.",
+            "🔐 **Secure SQL Connection** - Managing SQL Server credentials securely and handling connection errors.",
+            "📝 **Error Logging** - Capturing and logging errors during query execution and data export."
+        ],
+        solutionApproach: [
+            "✅ **Used Pandas and OpenPyXL** for efficient data handling and Excel/CSV export.",
+            "✅ **Implemented JSON Configuration** for easy customization of SQL queries and export settings.",
+            "✅ **Added Detailed Logging** to track execution progress and debug errors.",
+            "✅ **Dynamic File Naming** to avoid file conflicts and ensure unique outputs."
+        ],
+        userExperience: {
+            "configuration": "Users configure the tool via a JSON file, specifying SQL connection details, queries, and export settings.",
+            "execution": "The tool runs from the command line, executing SQL queries and exporting data to the specified format.",
+            "output": "Exported files are saved in the designated output folder, with logs stored in a separate log folder for reference."
+        },
+        futureEnhancements: [
+            "📍 **GUI Interface** - Develop a graphical user interface for easier configuration and execution.",
+            "📊 **Advanced Data Transformation** - Add support for data transformation and cleaning before export.",
+            "🔄 **Integration with Other Databases** - Extend support to other databases like MySQL, PostgreSQL, etc.",
+            "📄 **PDF Export** - Add the ability to export data to PDF for reporting purposes."
+        ],
+        impact: "This tool **streamlines the process of exporting data from SQL Server** to Excel or CSV, saving time and reducing manual effort. It is particularly useful for data analysts, developers, and database administrators who need to generate reports or analyze data regularly.",
+        reference: "https://github.com/joji-kuriyathan-joy/Export_SQL_Data",
+        image: "/SqlExport.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Stock Management System",
+        description: "A Java-based desktop application designed to manage stock inventory, allowing users to add, update, sell, and delete products efficiently. The system provides real-time stock tracking, transaction recording, and low-stock alerts.",
+        subheading: "Efficient Stock Management with Java and Swing",
+        technologies: [
+            "Java",
+            "Swing GUI",
+            "JUnit",
+            "CSV File Handling",
+            "MVC Architecture"
+        ],
+        projectStructure: {
+            "frontend": "Swing-based desktop UI for managing stock records and transactions.",
+            "backend": "Java-based logic handling CRUD operations and transaction processing.",
+            "database": "CSV file-based storage for product inventory and sales transactions.",
+            "authentication": "N/A",
+            "dataProcessing": "Tracks stock levels, records sales, and updates product details dynamically.",
+            "Development": "Implemented using MVC architecture for code modularity and reusability."
+        },
+        projectScope: "This project was designed to **simplify stock management** by providing a user-friendly interface to track products, handle transactions, and generate real-time stock reports. It allows businesses to streamline inventory processes, prevent stock shortages, and enhance operational efficiency.",
+        keyFeatures: [
+            "📦 **Stock Management** - Users can add, update, and delete stock items with ease.",
+            "🛒 **Sales Transactions** - Tracks product sales, including date, time, and quantity sold.",
+            "📊 **Low Stock Alerts** - Notifies users when stock levels fall below a predefined threshold.",
+            "🔍 **Smart Search** - Allows users to search for products by code or description.",
+            "📝 **Transaction Logging** - Records every sale in CSV files for future reference.",
+            "✅ **User-Friendly UI** - Designed with Swing for an intuitive and easy-to-use interface."
+        ],
+        importantCodeSnippet: "Stock Update Logic",
+        codeSnippet: "public boolean updateStock(String productCode, int newQuantity) {\n    if (inventory.containsKey(productCode)) {\n        inventory.get(productCode).setQuantity(newQuantity);\n        return true;\n    }\n    return false;\n}",
+        projectChallenges: [
+            "⚙️ **CSV File Handling** - Managing structured stock and transaction data efficiently.",
+            "🔄 **Dynamic Stock Updates** - Ensuring seamless real-time updates for inventory changes.",
+            "📝 **Data Integrity** - Preventing duplicate entries and maintaining accurate transaction logs.",
+            "🧪 **Testing and Debugging** - Writing unit tests to validate core functionalities."
+        ],
+        solutionApproach: [
+            "✅ **Implemented MVC Architecture** to separate UI, logic, and data management.",
+            "✅ **Used Java Swing** for a dynamic and interactive graphical interface.",
+            "✅ **Developed JUnit Test Cases** to ensure system reliability and correctness.",
+            "✅ **CSV File Storage** for lightweight and easily accessible data persistence."
+        ],
+        userExperience: {
+            "dashboard": "Displays all stock items, including low-stock warnings.",
+            "addProduct": "Users can add new products with descriptions and quantities.",
+            "updateStock": "Allows editing of stock levels and product details.",
+            "sellProduct": "Enables selling of items with automatic transaction logging.",
+            "deleteProduct": "Removes outdated or discontinued products from inventory."
+        },
+        futureEnhancements: [
+            "📍 **Database Integration** - Migrate to SQL-based storage for scalability.",
+            "📊 **Graphical Reports** - Add data visualization for better inventory insights.",
+            "📄 **Barcode Scanning** - Enable barcode scanning for quick product lookup.",
+            "🔄 **Cloud Backup** - Implement cloud-based data storage for enhanced security."
+        ],
+        impact: "This **Stock Management System** enhances inventory control by providing an efficient, real-time solution for tracking stock, recording transactions, and ensuring seamless business operations.",
+        reference: "https://github.com/joji-kuriyathan-joy/StockControlApp---Mini-",
+        image: "/stockcontrol.png"
     }
+
 ];

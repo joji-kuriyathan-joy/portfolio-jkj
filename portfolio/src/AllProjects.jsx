@@ -12,8 +12,7 @@ const AllProjects = ({ sendData }) => {
         setCurProjectInfo(project);
     }
 
-    console.log("showProject", showProject);
-    console.log("curProjectInfo", curProjectInfo);
+
     return (
         <div className="all-projects">
             <div className="projects-nav ubuntu-regular">
