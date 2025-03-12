@@ -603,7 +603,7 @@ export const projectsData = [
     {
         id: crypto.randomUUID(),
         title: "Benefits Tracker Application",
-        description: "A Spring Boot-based system designed to securely manage, validate, and track participant details applying for various benefits. The application provides RESTful APIs, data validation, and audit tracking for compliance and historical records.",
+        description: "Small spring boot project created during an interview process to securely manage, validate, and track participant details applying for various benefits. The application provides RESTful APIs, data validation, and audit tracking for compliance and historical records.",
         subheading: "Robust Participant Management with Spring Boot and JPA",
         technologies: [
             "Java 21",
