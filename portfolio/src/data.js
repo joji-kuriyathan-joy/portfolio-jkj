@@ -599,6 +599,66 @@ export const projectsData = [
         impact: "This **Stock Management System** enhances inventory control by providing an efficient, real-time solution for tracking stock, recording transactions, and ensuring seamless business operations.",
         reference: "https://github.com/joji-kuriyathan-joy/StockControlApp---Mini-",
         image: "/stockcontrol.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Benefits Tracker Application",
+        description: "A Spring Boot-based system designed to securely manage, validate, and track participant details applying for various benefits. The application provides RESTful APIs, data validation, and audit tracking for compliance and historical records.",
+        subheading: "Robust Participant Management with Spring Boot and JPA",
+        technologies: [
+            "Java 21",
+            "Spring Boot",
+            "Spring Data JPA",
+            "Postgres SQL",
+            "Lombok",
+            "JUnit & Mockito",
+            "Postman"
+        ],
+        projectStructure: {
+            frontend: "RESTful API (Future enhancement: Web UI with React/Angular).",
+            backend: "Spring Boot application managing business logic, validations, and audit tracking.",
+            database: "Postgres SQL for data persistence of participant and audit log details.",
+            authentication: "Currently N/A (Future enhancement: OAuth2 and Role-Based Access).",
+            dataProcessing: "Validates participant data inputs (NINO, email, phone numbers, UK postcodes) and tracks changes via audit logs.",
+            development: "Follows a three-tier architecture (Presentation, Business, Data Layers) to maintain modularity and reusability."
+        },
+        projectScope: "The project aims to **securely manage participant details**, **enforce robust validation rules**, and **track historical changes** through audit logs, supporting compliance requirements and long-term system maintainability.",
+        keyFeatures: [
+            "👥 **Participant Management** - Create, retrieve, update, and delete participant records.",
+            "✅ **Data Validation** - Ensures valid input for NINO, email, phone, and UK postcode.",
+            "📝 **Audit Tracking** - Tracks and logs changes to participant data.",
+            "📡 **RESTful APIs** - Provides secure, JSON-based API communication."
+        ],
+        importantCodeSnippet: "Participant Service Logic Example",
+        codeSnippet: "public Participant registerParticipant(Participant participant) {\n    validateParticipantDetails(participant);\n    participant.setRegistrationDate(LocalDate.now());\n    return participantRepository.save(participant);\n}",
+        projectChallenges: [
+            "🔍 **Complex Validation Logic** - Accurately validating diverse data inputs.",
+            "📋 **Audit Logs Management** - Efficiently tracking and storing detailed participant data changes.",
+            "🔐 **Security Considerations** - Preventing SQL injection and handling exceptions securely.",
+            "🧪 **Robust Testing** - Ensuring reliability through comprehensive unit testing."
+        ],
+        solutionApproach: [
+            "✅ **Three-Tier Architecture** for clear separation between presentation, business, and data layers.",
+            "✅ **Spring Boot & JPA** used for rapid development and secure database interactions.",
+            "✅ **JUnit & Mockito** for unit testing business logic and ensuring code reliability.",
+            "✅ **REST API Design** following best practices for secure, efficient, and structured communication."
+        ],
+        userExperience: {
+            dashboard: "Provides APIs for viewing participant records and historical changes.",
+            addParticipant: "Allows creation of participant profiles with validation.",
+            updateParticipant: "Supports updating participant details with audit tracking.",
+            retrieveParticipant: "Fetches participant records by ID or all records collectively.",
+            auditTracking: "Retrieves detailed history logs of changes made to participant data."
+        },
+        futureEnhancements: [
+            "🌐 **Frontend Implementation** - React/Angular UI for interactive participant management.",
+            "🔒 **OAuth2 Authentication** - Enhanced security with role-based access controls.",
+            "💳 **Payment Integration** - Future integration for benefit-related payments."
+        ],
+        impact: "The Benefits Tracker Application delivers a **secure, reliable, and scalable** solution, significantly enhancing participant data management, validation accuracy, and compliance through structured audit logging.",
+        reference: "https://github.com/joji-kuriyathan-joy/benefits_tracker",
+        image: "/benefits_tracker.png"
     }
+
 
 ];
